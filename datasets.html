@@ -1,75 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datasets | Michael Jones-Correa</title>
-  <!-- Reuse whatever CSS your site links — adjust the href if needed -->
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Fallback/inline styles to match the site's clean academic look */
-    body {
-      font-family: Georgia, serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      color: #222;
-      line-height: 1.7;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #8b0000;
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
-    }
-    nav ul li a:hover { text-decoration: underline; }
-    h1 { font-size: 1.6rem; margin-bottom: 1.5rem; }
-    h2 { font-size: 1.1rem; border-bottom: 1px solid #ccc; padding-bottom: 0.3rem; margin-top: 2rem; }
-    .dataset {
-      margin-bottom: 1.8rem;
-    }
-    .dataset p {
-      margin: 0.25rem 0;
-      font-size: 0.97rem;
-    }
-    .dataset a {
-      color: #8b0000;
-    }
-    .site-title a {
-      font-size: 1.3rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: #222;
-      font-family: Arial, sans-serif;
-    }
-    .hamburger { display: none; }
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; gap: 0.5rem; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="site-title"><a href="index.html">Michael Jones-Correa</a></div>
-
   <nav>
-    <ul>
+    <div class="nav-name"><a href="index.html">Michael Jones-Correa</a></div>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="bio.html">Bio</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="books.html">Books</a></li>
       <li><a href="research.html">Articles</a></li>
-      <li><a href="datasets.html"><strong>Datasets</strong></a></li>
+      <li><a href="datasets.html" class="active">Datasets</a></li>
       <li><a href="teaching.html">Teaching</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
   </nav>
 
   <h1>Datasets</h1>
