@@ -15,8 +15,8 @@
   --border:    #d6cfc4;
   --link:      #1b2a4a;
 
-  --font-serif: 'EB Garamond', Georgia, serif;
-  --font-sans:  'Libre Franklin', system-ui, sans-serif;
+  --font-serif: 'Calibri Light', Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
+  --font-sans:  'Calibri Light', Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
 
   --max-w: 1060px;
   --nav-h: 60px;
@@ -29,9 +29,10 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.7;
+  font-family: 'Calibri Light', Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.75;
   min-height: 100vh;
 }
 
@@ -40,38 +41,31 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--navy);
+  background: var(--bg);
   height: var(--nav-h);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 2rem;
-  gap: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+  border-bottom: 1px solid var(--border);
 }
 
-.nav-name a {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: .95rem;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: .02em;
-  white-space: nowrap;
-  flex-shrink: 0;
+.nav-name {
+  display: none;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: .25rem;
-  margin-left: auto;
+  margin: 0;
 }
 
 .nav-links a {
   font-family: var(--font-sans);
   font-size: .8rem;
   font-weight: 500;
-  color: rgba(255,255,255,.75);
+  color: var(--muted);
   text-decoration: none;
   padding: .4rem .75rem;
   border-radius: 3px;
@@ -80,21 +74,21 @@ nav {
   transition: color .2s, background .2s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: #fff;
-  background: rgba(255,255,255,.12);
+.nav-links a:hover {
+  color: var(--navy);
+  background: rgba(0,0,0,.05);
 }
 
 .nav-links a.active {
-  color: #f5c842;
+  color: var(--crimson);
+  font-weight: 600;
 }
 
 .nav-toggle {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--navy);
   font-size: 1.4rem;
   cursor: pointer;
   margin-left: auto;
@@ -175,19 +169,19 @@ nav {
 
 h1 {
   font-family: var(--font-serif);
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 500;
   line-height: 1.15;
   color: var(--navy);
-  margin-bottom: .4rem;
+  margin-bottom: 1rem;
 }
 
 .title {
   font-family: var(--font-sans);
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .dept {
@@ -196,12 +190,13 @@ h1 {
 }
 
 .intro {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--text);
   margin-bottom: 2.5rem;
   max-width: 680px;
   border-left: 3px solid var(--crimson);
   padding-left: 1.1rem;
+  line-height: 1.8;
 }
 
 /* ── SECTIONS ── */
@@ -229,7 +224,7 @@ h2 {
 }
 
 .role-list li {
-  font-size: .95rem;
+  font-size: 1.05rem;
   padding-left: 1rem;
   position: relative;
   color: var(--text);
@@ -284,14 +279,14 @@ h2 {
 /* ── CONTACT ── */
 .contact-section address {
   font-style: normal;
-  font-size: .95rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: .6rem;
 }
 
 .email a, .phone {
   font-family: var(--font-sans);
-  font-size: .88rem;
+  font-size: .95rem;
 }
 
 .email a {
@@ -346,11 +341,11 @@ h2 {
 }
 
 .page-layout h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 2rem;
 }
 
-.page-layout p { margin-bottom: 1rem; font-size: 1rem; }
+.page-layout p { margin-bottom: 1rem; font-size: 1.05rem; }
 
 /* Books */
 .book-item {
@@ -378,7 +373,7 @@ h2 {
 
 .book-info h3 {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 500;
   font-style: italic;
   color: var(--navy);
@@ -387,7 +382,7 @@ h2 {
 
 .book-meta {
   font-family: var(--font-sans);
-  font-size: .8rem;
+  font-size: .9rem;
   color: var(--muted);
   margin-bottom: .6rem;
 }
@@ -402,7 +397,7 @@ h2 {
 .paper-item:last-child { border-bottom: none; }
 
 .paper-item h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 400;
   font-style: italic;
   color: var(--navy);
@@ -411,7 +406,7 @@ h2 {
 
 .paper-meta {
   font-family: var(--font-sans);
-  font-size: .8rem;
+  font-size: .88rem;
   color: var(--muted);
 }
 
@@ -422,7 +417,7 @@ h2 {
 
 .course-item h3 {
   font-family: var(--font-sans);
-  font-size: .95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: .2rem;
@@ -430,7 +425,7 @@ h2 {
 
 .course-item .course-num {
   font-family: var(--font-sans);
-  font-size: .75rem;
+  font-size: .82rem;
   color: var(--crimson);
   font-weight: 500;
   letter-spacing: .05em;
@@ -443,8 +438,9 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  background: var(--navy);
-  color: #fff;
+  background: transparent;
+  color: var(--crimson);
+  border: 1.5px solid var(--crimson);
   font-family: var(--font-sans);
   font-size: .82rem;
   font-weight: 500;
@@ -454,10 +450,13 @@ h2 {
   padding: .65rem 1.4rem;
   border-radius: 2px;
   margin-bottom: 2.5rem;
-  transition: background .2s;
+  transition: background .2s, color .2s;
 }
 
-.cv-download:hover { background: var(--crimson); }
+.cv-download:hover {
+  background: var(--crimson);
+  color: #fff;
+}
 
 /* ── FOOTER ── */
 footer {
@@ -472,7 +471,7 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 700px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--navy); padding: 1rem 2rem; gap: .25rem; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1rem 2rem; gap: .25rem; }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
 
