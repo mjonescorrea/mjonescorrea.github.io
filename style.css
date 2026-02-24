@@ -15,8 +15,8 @@
   --border:    #d6cfc4;
   --link:      #1b2a4a;
 
-  --font-serif: 'Calibri Light', Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
-  --font-sans:  'Calibri Light', Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
+  --font-serif: 'Nunito', 'Calibri Light', Calibri, sans-serif;
+  --font-sans:  'Nunito', 'Calibri Light', Calibri, sans-serif;
 
   --max-w: 1060px;
   --nav-h: 60px;
@@ -29,7 +29,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Calibri Light', Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
+  font-family: 'Nunito', 'Calibri Light', Calibri, sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.75;
